@@ -1,0 +1,38 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Test Framework
+    testImplementation 'org.testng:testng:7.10.2'
+
+    // API Automation
+    testImplementation 'io.rest-assured:rest-assured:5.3.1'
+
+    // JSON
+    implementation 'org.json:json:20230227'
+    testImplementation 'com.google.code.gson:gson:2.11.0'
+
+    // Assertion
+    testImplementation 'org.hamcrest:hamcrest:2.2'
+    // Selenium UI Automation
+    implementation 'org.seleniumhq.selenium:selenium-java:4.35.0'
+}
+
+test {
+    useTestNG {
+        suites 'src/test/java/runner/testng.xml'
+    }
+
+    testLogging {
+        showStandardStreams = true
+        events "passed", "skipped", "failed"
+    }
+}

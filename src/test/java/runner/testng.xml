@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="TixSplit API Automation">
+    <test name="Authentication Tests">
+        <classes>
+            <class name="tests.auth.LoginTest"/>
+            <class name="tests.auth.RegisterTixsplit"/>
+            <class name="tests.auth.ui.LoginUITest"/>
+            <class name="tests.auth.ui.RegisterUITest"/>
+            <class name="tests.auth.ui.CreateCommunityUITest"/>
+            <class name="community.CreateCommunityAPITest"/>
+            <class name="tests.auth.ui.CreateEventUITest"/>
+            <class name="tests.auth.ui.TestE2E"/>
+        </classes>
+    </test>
+</suite>

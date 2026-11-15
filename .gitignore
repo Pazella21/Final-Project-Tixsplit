@@ -1,0 +1,18 @@
+# Gradle
+.gradle/
+build/
+
+# IDE
+.idea/
+*.iml
+
+# Credentials
+.env
+.env.*
+**/config.properties
+secrets.properties
+
+# Test reports temporary files
+allure-results/
+allure-report/
+test-output/
